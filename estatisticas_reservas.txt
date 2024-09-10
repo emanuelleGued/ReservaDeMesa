@@ -3,9 +3,9 @@ Total de Reservas: 3
 Total de Mesas: 6
 Mesas Ocupadas: 2
 Tempo Total de Uso das Mesas (em minutos):
-Mesa 1:
-  Tempo Total: 120 minutos
-  Tempo Médio por Reserva: 60,00 minutos
 Mesa 3:
   Tempo Total: 120 minutos
   Tempo Médio por Reserva: 120,00 minutos
+Mesa 1:
+  Tempo Total: 120 minutos
+  Tempo Médio por Reserva: 60,00 minutos

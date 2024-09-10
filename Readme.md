@@ -2,6 +2,29 @@
 
 O projeto Sistema de Reserva de Mesas foi desenvolvido como parte de um curso de Programação Orientada a Objetos e tem como objetivo gerenciar reservas de mesas em um restaurante. Ele foi implementado em Java utilizando Swing para a interface gráfica e inclui funcionalidades para adicionar, listar e finalizar reservas, além de gerar relatórios e estatísticas.
 
+Abaixo estão algumas capturas de tela do sistema em funcionamento:
+
+**Tela Principal:**
+
+![Tela Principal](screenshots/telaprincipal.png)
+
+**Fazer Reservas:**
+
+![Tela de Reserva](screenshots/telaReserva.png)
+
+**Cancelar Reservas:**
+
+![Tela de Cancelamento](screenshots/telaCancelamento.png)
+
+**Listar Reservas:**
+
+![Tela de Listagem](screenshots/telaReserva.png)
+
+**Finalizar Reservas:**
+
+![Tela de Finalizar](screenshots/telaFinalizarReserva.png)
+
+
 ## 📖 Índice
 
 - [📝 Descrição do Projeto](#-descrição-do-projeto)
@@ -64,21 +87,21 @@ A arquitetura do sistema é dividida em várias camadas, com uma interface gráf
 
 ### Passos para executar o projeto
 
-1. **Adicionar Mesas:**
-
-    - Use a interface gráfica para adicionar novas mesas ao restaurante.
-
-2. **Fazer Reservas:**
+1. **Fazer Reservas:**
 
     - Selecione uma mesa disponível e faça uma reserva preenchendo os detalhes necessários.
 
-3. **Listar Mesas Disponíveis:**
+2. **Listar Mesas Disponíveis:**
 
     - Visualize todas as mesas disponíveis através da funcionalidade de listagem.
 
-4. **Finalizar Reservas:**
+3. **Finalizar Reservas:**
 
     - Complete o processo de reserva preenchendo o horário de saída e finalizando a reserva.
+
+4. **Cancelar Reservas:**
+
+    - Caso necessário, preencha as informações do id e numero da mesa e cancele a reserva.
 
 5. **Gerar Estatísticas:**
 
