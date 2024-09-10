@@ -46,7 +46,7 @@ A arquitetura do sistema é dividida em várias camadas, com uma interface gráf
 1. **Clone o repositório:**
 
    ```bash
-   git clone git@github.com:emanuelleGued/ReservaDeMesa.git
+   git clone https://github.com/emanuelleGued/ReservaDeMesa.git
    cd ReservaDeMesa
    ```
 
