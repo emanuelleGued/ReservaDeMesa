@@ -18,7 +18,7 @@ Abaixo estão algumas capturas de tela do sistema em funcionamento:
 
 **Listar Reservas:**
 
-![Tela de Listagem](screenshots/telaReserva.png)
+![Tela de Listagem](screenshots/telaListaReservas.png)
 
 **Finalizar Reservas:**
 
