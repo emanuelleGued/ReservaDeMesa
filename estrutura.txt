@@ -1,0 +1,46 @@
+RestaurantReservationSystem/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── restaurante/
+│   │   │   │   │   ├── app/
+│   │   │   │   │   │   ├── Main.java
+│   │   │   │   │   ├── modelo/
+│   │   │   │   │   │   ├── Cliente.java
+│   │   │   │   │   │   ├── Mesa.java
+│   │   │   │   │   │   ├── Reserva.java
+│   │   │   │   │   │   ├── Restaurante.java
+│   │   │   │   │   │   ├── exceptions/
+│   │   │   │   │   │   │   ├── MesaIndisponivelException.java
+│   │   │   │   │   ├── ui/
+│   │   │   │   │   │   ├── TelaCancelamento.java
+│   │   │   │   │   │   ├── TelaListarReservas.java
+│   │   │   │   │   │   ├── TelaPrincipal.java
+│   │   │   │   │   │   ├── TelaReserva.java
+│   ├── resources/
+│   │   ├── data/
+│   │   │   ├── mesas.dat (exemplo)
+│   │   │   ├── reservas.dat (exemplo)
+│   │   ├── config/
+│   │   │   ├── application.properties (opcional)
+│
+├── docs/
+│   ├── README.md
+│   ├── diagramas/
+│   │   ├── class-diagram.png
+│   │   ├── sequence-diagram.png
+│
+├── build/
+│   ├── RestaurantReservationSystem.jar
+│
+└── .gitignore
+
+
+// Coisas para fazer nesse projeto:
+--> Mudar a estrutura para mvc (OK)
+--> Colocar validações em data, hora e telefone do cliente (OK)
+--> Retirar reserva de reservas.csv quando a reserva for cancelada (OK)
+--> RESOLVER ERRO DE NULL EM RESERVAS.CSV (OK)
+--> RESERVAR EM UMA MESA DEPOIS DE FINALIZADA (OK)
