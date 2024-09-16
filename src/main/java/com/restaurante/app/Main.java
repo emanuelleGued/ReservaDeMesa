@@ -33,7 +33,7 @@ public class Main {
             String caminhoArquivo = "estatisticas_reservas.txt"; // Caminho onde o arquivo será salvo
             reservaController.gerarEstatisticas(caminhoArquivo);
 
-            // Inicializa a interface gráfica principal em uma thread da Event Dispatch Thread
+            // Inicializa a interface gráfica principal
             SwingUtilities.invokeLater(() -> {
                 TelaPrincipal telaPrincipal = new TelaPrincipal(reservaController, mesaController);
                 telaPrincipal.setVisible(true);

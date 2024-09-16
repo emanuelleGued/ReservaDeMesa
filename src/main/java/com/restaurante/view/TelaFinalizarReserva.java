@@ -114,14 +114,4 @@ public class TelaFinalizarReserva extends JFrame {
         }
     }
 
-    private boolean validarHora(String hora) {
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-        sdf.setLenient(false);
-        try {
-            sdf.parse(hora);
-            return true;
-        } catch (ParseException e) {
-            return false;
-        }
-    }
 }

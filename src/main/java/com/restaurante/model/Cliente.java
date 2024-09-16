@@ -18,14 +18,6 @@ public class Cliente {
         return telefone;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setTelefone(String telefone) {
-        validarNumero(telefone);
-        this.telefone = telefone;
-    }
 
     private void validarNumero(String telefone) {
         if (telefone.length() < 9) {

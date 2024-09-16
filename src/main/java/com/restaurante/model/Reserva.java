@@ -51,10 +51,6 @@ public class Reserva {
         return horaSaida;
     }
 
-    public boolean isFinalizada() {
-        return finalizada;
-
-    }
 
     public void confirmarReserva() {
         mesa.ocuparMesa();
@@ -97,12 +93,6 @@ public class Reserva {
         }
     }
 
-
-
-
-    public void liberarMesa(){
-        mesa.liberarMesa();
-    }
 
     public int getId() {
         return id;

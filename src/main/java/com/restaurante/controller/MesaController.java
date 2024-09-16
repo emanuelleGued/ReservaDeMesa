@@ -25,12 +25,5 @@ public class MesaController {
         return mesas;
     }
 
-    public List<Mesa> listarMesasDisponiveis() {
-        List<Mesa> mesasDisponiveis = restaurante.listarMesasDisponiveis();
-        if (mesasDisponiveis == null) {
-            throw new IllegalStateException("A lista de mesas disponíveis não foi inicializada.");
-        }
-        return mesasDisponiveis;
-    }
 
 }

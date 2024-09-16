@@ -13,7 +13,6 @@ public class Restaurante {
     private List<Reserva> reservas;
     private ReservaController reservaController;
 
-    // Construtor que inicializa Restaurante e ReservaController
     public Restaurante(String nome) {
         this.nome = nome;
         this.mesas = new ArrayList<>();
@@ -21,20 +20,9 @@ public class Restaurante {
         this.reservaController = new ReservaController(this);
     }
 
-    public String getNome() {
-        return nome;
-    }
 
     public List<Mesa> getMesas() {
         return mesas;
-    }
-
-    public List<Reserva> getReservas() {
-        return reservas;
-    }
-
-    public ReservaController getReservaController() {
-        return reservaController;
     }
 
     public void adicionarMesa(Mesa mesa) {
@@ -47,16 +35,6 @@ public class Restaurante {
 
     public List<Reserva> listarReservas() {
         return reservas;
-    }
-
-    public List<Mesa> listarMesasDisponiveis() {
-        List<Mesa> disponiveis = new ArrayList<>();
-        for (Mesa mesa : mesas) {
-            if (mesa.isDisponivel()) {
-                disponiveis.add(mesa);
-            }
-        }
-        return disponiveis;
     }
 
     public Reserva fazerReserva(Cliente cliente, int numeroMesa, String data, String horaChegada) throws MesaIndisponivelException {
@@ -94,7 +72,7 @@ public class Restaurante {
     public void carregarReservas() {
         try (BufferedReader reader = new BufferedReader(new FileReader("reservas.csv"))) {
             String linha;
-            reader.readLine(); // Pular o cabeçalho
+            reader.readLine();
 
             while ((linha = reader.readLine()) != null) {
                 String[] partes = linha.split(",");

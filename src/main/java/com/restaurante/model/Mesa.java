@@ -23,7 +23,6 @@ public class Mesa {
         return disponivel;
     }
 
-    // Estes métodos serão utilizados internamente pelo Restaurante e Controladores
     void ocuparMesa() {
         this.disponivel = false;
     }

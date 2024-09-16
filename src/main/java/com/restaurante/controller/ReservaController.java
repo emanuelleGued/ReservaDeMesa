@@ -12,7 +12,6 @@ import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ReservaController {
     private Restaurante restaurante;
@@ -49,12 +48,6 @@ public class ReservaController {
 
     public List<Reserva> listarReservas() {
         return restaurante.listarReservas();
-    }
-
-    public List<Mesa> getMesasDisponiveis() {
-        return restaurante.listarMesasDisponiveis().stream()
-                .filter(Mesa::isDisponivel)
-                .collect(Collectors.toList());
     }
 
     public void gerarEstatisticas(String caminhoArquivo) {
@@ -118,38 +111,8 @@ public class ReservaController {
         }
     }
 
-    public void atualizarReservaNoArquivo(Reserva reserva, String horaFim) {
-        String caminhoArquivo = "reservas.csv";
-        List<String> linhas = new ArrayList<>();
-        String linhaAtualizada;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(caminhoArquivo))) {
-            String linha;
-
-            while ((linha = reader.readLine()) != null) {
-                String[] dados = linha.split(",");
-
-                if (dados[0].equals(reserva.getCliente().getNome()) && dados[2].equals(String.valueOf(reserva.getMesa().getNumero()))) {
-                    linhaAtualizada = linha + "," + horaFim;
-                    linhas.add(linhaAtualizada);
-                } else {
-                    linhas.add(linha);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo))) {
-            for (String linha : linhas) {
-                writer.write(linha);
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
+    // Metodo para fializar reserva
     public boolean finalizarReservaMesa(int idReserva, String horaFim) throws ReservaNaoExistenteException, HoraInvalidaException {
         // Busca a reserva pelo ID
         Reserva reserva = buscarReservaPorNumeroId(String.valueOf(idReserva));
@@ -176,12 +139,13 @@ public class ReservaController {
         // Salva as reservas atualizadas
         salvarReservas();
 
-        return true; // Indica que a finalização foi bem-sucedida
+        return true;
     }
 
 
 
 
+    // Metodo para salvar os dados das reservas em reservas.csv
     public void salvarReservas() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("reservas.csv"))) {
             // Escreve o cabeçalho no arquivo
@@ -204,6 +168,7 @@ public class ReservaController {
 
 
 
+    // Metodo para validação de horario de saida
     private boolean validarHoraFim(Reserva reserva, String horaFim) {
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
         try {
